@@ -2,6 +2,7 @@ package com.antonicastejon.cryptodata.di
 
 import android.arch.lifecycle.ViewModel
 import com.antonicastejon.cryptodata.presentation.main.crypto_list.CryptoListViewModel
+import com.antonicastejon.cryptodata.presentation.main.crypto_list.UserListViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
@@ -23,4 +24,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(CryptoListViewModel::class)
     abstract fun bindCryptoListViewModel(viewModel: CryptoListViewModel) : ViewModel
+
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(UserListViewModel::class)
+    abstract fun bindUserListViewModel(viewModel: CryptoListViewModel) : ViewModel
 }

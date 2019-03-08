@@ -17,7 +17,7 @@ class CryptoListInteractor(private val coinMarketCapRepository: CoinMarketCapRep
                 .map { cryptos -> cryptos.map(cryptoViewModelMapper) }
     }
 
-    val cryptoViewModelMapper: (Crypto) -> CryptoViewModel = {
+    private val cryptoViewModelMapper: (Crypto) -> CryptoViewModel = {
         crypto -> CryptoViewModel(crypto.id, crypto.name, crypto.symbol, crypto.rank, crypto.priceUsd.toFloat(), crypto.priceBtc.toFloat(), crypto.percentChange24h.toFloat())
     }
 }

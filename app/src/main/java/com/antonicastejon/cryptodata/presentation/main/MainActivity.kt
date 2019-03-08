@@ -7,6 +7,7 @@ import com.antonicastejon.cryptodata.R
 import com.antonicastejon.cryptodata.common.replaceFragment
 import com.antonicastejon.cryptodata.presentation.main.crypto_list.CRYPTO_LIST_FRAGMENT_TAG
 import com.antonicastejon.cryptodata.presentation.main.crypto_list.newCryptoListFragment
+import com.antonicastejon.cryptodata.presentation.main.crypto_list.newUserListFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
     @Inject
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
 
-    val cryptoListFragment by lazy { newCryptoListFragment() }
+    val cryptoListFragment by lazy { newUserListFragment() }
 
     override fun supportFragmentInjector(): AndroidInjector<android.support.v4.app.Fragment> {
         return fragmentInjector

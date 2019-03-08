@@ -15,7 +15,8 @@ class RepositoryModule {
 
     @Provides
     @Singleton
-    fun providesCoinMarketCapRepository(coinMarketCapApi: CoinMarketCapApi): CoinMarketCapRepository = CoinMarketCapDownloader(coinMarketCapApi)
+    fun providesCoinMarketCapRepository(coinMarketCapApi: CoinMarketCapApi): CoinMarketCapRepository =
+            CoinMarketCapDownloader(coinMarketCapApi)
 
 
 }

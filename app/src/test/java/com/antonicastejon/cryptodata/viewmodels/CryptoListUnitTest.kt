@@ -23,7 +23,7 @@ class CryptoListUnitTest {
     @JvmField
     val rule = InstantTaskExecutorRule()
 
-    val cryptoListUseCases = mock<CryptoListUseCases>()
+    val cryptoListUseCases = mock<CryptoListUseCases>()!!
     val observerState = mock<Observer<CryptoListState>>()
 
     val viewmodel by lazy { CryptoListViewModel(cryptoListUseCases, Schedulers.trampoline(), Schedulers.trampoline()) }
